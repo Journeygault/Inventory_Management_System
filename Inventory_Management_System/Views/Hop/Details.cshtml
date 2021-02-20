@@ -1,0 +1,90 @@
+﻿@model Inventory_Management_System.Models.ViewModels.ShowHop
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<!--Details Successfuly displayed-->
+<div>
+    <h4>Hop</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.hop.HopClassificationID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hop.HopClassificationID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hop.HopName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hop.HopName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hop.HopProducer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hop.HopProducer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hop.HopProductionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hop.HopProductionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hop.HopSerialNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hop.HopSerialNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hop.HopVolume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hop.HopVolume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hop.AlphaAcid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hop.AlphaAcid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hop.BetaAcid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hop.BetaAcid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hop.HopNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hop.HopNotes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.hop.HopID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
