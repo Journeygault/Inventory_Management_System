@@ -11,7 +11,9 @@
 </p>
 <table class="table">
     <tr>
-
+        <th>
+            @Html.DisplayNameFor(model => model.HopID)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.HopClassificationID)
         </th>
@@ -43,40 +45,42 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.HopClassificationID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HopName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HopProducer)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HopProductionDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HopSerialNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HopVolume)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AlphaAcid)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BetaAcid)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HopNotes)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.HopID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.HopID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.HopID })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.HopID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HopClassificationID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HopName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HopProducer)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HopProductionDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HopSerialNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HopVolume)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AlphaAcid)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.BetaAcid)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HopNotes)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.HopID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.HopID }) |
+    </td>
+</tr>
 }
 
 </table>

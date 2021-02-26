@@ -1,7 +1,7 @@
 ﻿@model Inventory_Management_System.Models.HopDTO
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "View";
 }
 
 <h2>Delete</h2>
@@ -80,7 +80,7 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm("Delete", "Hop", new { id = Model.HopID })) { 
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">

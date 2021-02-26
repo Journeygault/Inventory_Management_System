@@ -15,10 +15,11 @@ namespace Inventory_Management_System.Models
     public class Hop
     {
         [Key]//Capital?
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int HopID { get; set; }
         public string HopName { get; set; }
         public string HopProducer { get; set; }
-        public DateTime HopProductionDate { get; set; }
+        public string HopProductionDate { get; set; }//Cant get date time working, switching to string
         public string HopSerialNumber { get; set; }
         public string HopVolume { get; set; }
         public int AlphaAcid { get; set; }
@@ -38,7 +39,7 @@ namespace Inventory_Management_System.Models
         public int HopID { get; set; }
         public string HopName { get; set; }
         public string HopProducer { get; set; }
-        public DateTime HopProductionDate { get; set; }
+        public string HopProductionDate { get; set; }
         public string HopSerialNumber { get; set; }
         public string HopVolume { get; set; }
         public int AlphaAcid { get; set; }

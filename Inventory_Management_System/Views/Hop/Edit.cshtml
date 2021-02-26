@@ -1,7 +1,7 @@
 ﻿@model Inventory_Management_System.Models.ViewModels.UpdateHop
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "View";
 }
 
 <h2>Edit</h2>
@@ -9,93 +9,146 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Hop</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.hop.HopID)<!---->>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.hop.HopName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.hop.HopName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.hop.HopName, "", new { @class = "text-danger" })
-            </div>
-        </div>
+<div class="form-horizontal">
+    <h4>Hop</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.hop.HopID, new { Name = "HopID" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.hop.HopProducer, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.hop.HopProducer, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.hop.HopProducer, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.hop.HopProductionDate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.hop.HopProductionDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.hop.HopProductionDate, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.hop.HopSerialNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.hop.HopSerialNumber, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.hop.HopSerialNumber, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.hop.HopVolume, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.hop.HopVolume, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.hop.HopVolume, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.hop.AlphaAcid, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.hop.AlphaAcid, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.hop.AlphaAcid, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.hop.BetaAcid, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.hop.BetaAcid, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.hop.BetaAcid, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.hop.HopNotes, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.hop.HopNotes, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.hop.HopNotes, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.hop.HopClassificationID, "HopClassificationID", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.hop.HopClassificationID, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.hop.HopClassificationID, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.hop.HopName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.hop.HopName, new { htmlAttributes = new { @class = "form-control", Name ="HopName" } })
+            @Html.ValidationMessageFor(model => model.hop.HopName, "", new { @class = "text-danger" })
         </div>
     </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.hop.HopProducer, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.hop.HopProducer, new { htmlAttributes = new { @class = "form-control", Name = "HopProducer" } })
+            @Html.ValidationMessageFor(model => model.hop.HopProducer, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    
+            <div class="form-group">
+
+            @Html.LabelFor(model => model.hop.HopProductionDate, htmlAttributes: new { @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.hop.HopProductionDate, new { htmlAttributes = new { @class = "form-control", Name = "HopProductionDate" } })
+                @Html.ValidationMessageFor(model => model.hop.HopProductionDate, "", new { @class = "text-danger" })
+            </div>
+        </div><!--remove razor sintax, use string instead, check out email-->
+
+    
+    <div class="form-group">
+        @Html.LabelFor(model => model.hop.HopSerialNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.hop.HopSerialNumber, new { htmlAttributes = new { @class = "form-control", Name = "HopSerialNumber" } })
+            @Html.ValidationMessageFor(model => model.hop.HopSerialNumber, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.hop.HopVolume, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.hop.HopVolume, new { htmlAttributes = new { @class = "form-control", Name = "HopVolume" } })
+            @Html.ValidationMessageFor(model => model.hop.HopVolume, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.hop.AlphaAcid, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.hop.AlphaAcid, new { htmlAttributes = new { @class = "form-control", Name = "AlphaAcid" } })
+            @Html.ValidationMessageFor(model => model.hop.AlphaAcid, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.hop.BetaAcid, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.hop.BetaAcid, new { htmlAttributes = new { @class = "form-control", Name = "BetaAcid" } })
+            @Html.ValidationMessageFor(model => model.hop.BetaAcid, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.hop.HopNotes, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.hop.HopNotes, new { htmlAttributes = new { @class = "form-control", Name = "HopNotes" } })
+            @Html.ValidationMessageFor(model => model.hop.HopNotes, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.hop.HopClassificationID, "HopClassificationID", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.hop.HopClassificationID, new { htmlAttributes = new { @class = "form-control", Name = "HopClassificationID" } })
+            @Html.ValidationMessageFor(model => model.hop.HopClassificationID, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
 }
 
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+
+@*
+    Tried the following and failed
+
+        <nav>
+        <a class="navlink" href="/Hop/Show/@Model.hop.HopID">Back</a>
+    </nav>
+    <h2>Update Hop Information</h2>
+    <form method="POST" action="/Hop/Update/@Model.hop.HopID">
+        <div>
+            <label for="HopName">Hop Name</label>
+            <input type="text" id="HopName" name="HopName"
+                   value="@Model.hop.HopID" />
+        </div>
+        <div>
+            <label for="HopProducer">Hop Producer</label>
+            <input type="text" id="HopProducer" name="HopProducer"
+                   value="@Model.hop.HopProducer" />
+        </div>
+        <div>
+            <label for="HopProductionDate">Hop Production Date</label>
+            <input type="datetime" id="HopProductionDate" name="HopProductionDate"
+                   value="@Model.hop.HopProductionDate" />
+        </div>
+        <div>
+            <label for="HopSerialNumber">Hire Date</label>
+            <input type="text" id="HopSerialNumber" name="HopSerialNumber"
+                   value="@Model.hop.HopSerialNumber" />
+        </div>
+        <div>
+            <label for="HopVolume">Hop Volme</label>
+            <input type="number" id="HopVolume" name="HopVolume"
+                   value="@Model.hop.HopVolume" />
+        </div>
+        <div>
+            <label for="AlphaAcid">Alpha Acid</label>
+            <input type="number" id="AlphaAcid" name="AlphaAcid"
+                   value="@Model.hop.AlphaAcid" />
+        </div>
+        <div>
+            <label for="BetaAcid">Beta Acid</label>
+            <input type="number" id="BetaAcid" name="BetaAcid"
+                   value="@Model.hop.BetaAcid" />
+        </div>
+        <div>
+            <input type="submit" value="Update Hop" />
+        </div>
+    </form>
+
+*@

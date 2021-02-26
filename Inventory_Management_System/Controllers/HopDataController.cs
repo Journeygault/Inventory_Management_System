@@ -38,7 +38,7 @@ namespace Inventory_Management_System.Controllers
             {
                 HopDTO NewHop = new HopDTO
                 {
-                    HopClassificationID=Hop.HopClassificationID,
+                    HopClassificationID = Hop.HopClassificationID,
                     HopID = Hop.HopID,
                     HopName = Hop.HopName,
                     HopProducer = Hop.HopProducer,
@@ -120,7 +120,10 @@ namespace Inventory_Management_System.Controllers
 
             try
             {
-                db.SaveChanges();
+                Debug.WriteLine(hop);
+                Debug.WriteLine(hop.HopProductionDate);
+                Debug.WriteLine(hop.HopID);
+                db.SaveChanges();//This is where the error was being throne
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -152,7 +155,7 @@ namespace Inventory_Management_System.Controllers
             db.Hops.Add(hop);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = hop.HopID }, hop);//This is failing
+            return Ok(hop.HopID); ;//This is failing
         }
 
         // POST: api/Hops/DeleteHop/5

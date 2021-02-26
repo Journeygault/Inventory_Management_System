@@ -128,13 +128,13 @@ namespace Inventory_Management_System.Controllers
            if (response.IsSuccessStatusCode)
            {
                 try {
-                    int hopid = response.Content.ReadAsAsync<int>().Result;//MAMA MIA HERE IS AN ERROR FOR THE CREATING
+                    int hopid = response.Content.ReadAsAsync<int>().Result;
                     return RedirectToAction( "Details", new {
                         id = hopid
                     } );
 
                 } catch( Exception e ) {
-                    Debug.WriteLine(e);
+                    Debug.WriteLine(HopInfo);
                     return RedirectToAction("List");
                 }
            }

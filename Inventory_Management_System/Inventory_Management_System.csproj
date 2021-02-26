@@ -233,6 +233,22 @@
     <Compile Include="Migrations\202102191910069_Feb_19_21_02009.designer.cs">
       <DependentUpon>202102191910069_Feb_19_21_02009.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102211752422_Feb2121.cs" />
+    <Compile Include="Migrations\202102211752422_Feb2121.designer.cs">
+      <DependentUpon>202102211752422_Feb2121.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102261935325_switchToDateTime2.cs" />
+    <Compile Include="Migrations\202102261935325_switchToDateTime2.designer.cs">
+      <DependentUpon>202102261935325_switchToDateTime2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102261937299_switchToDateTimeNormal.cs" />
+    <Compile Include="Migrations\202102261937299_switchToDateTimeNormal.designer.cs">
+      <DependentUpon>202102261937299_switchToDateTimeNormal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102262004009_nowString.cs" />
+    <Compile Include="Migrations\202102262004009_nowString.designer.cs">
+      <DependentUpon>202102262004009_nowString.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Hop.cs" />
     <Compile Include="Models\HopClassification.cs" />
@@ -297,10 +313,11 @@
     <Content Include="Views\Hop\Details.cshtml" />
     <Content Include="Views\Hop\Create.cshtml" />
     <Content Include="Views\Hop\Edit.cshtml" />
-    <Content Include="Views\Hop\Delete.cshtml" />
+    <Content Include="Views\Hop\DeleteConfirm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\HopControllerV2\" />
     <Folder Include="Views\Malt\" />
   </ItemGroup>
   <ItemGroup>
@@ -377,6 +394,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102191910069_Feb_19_21_02009.resx">
       <DependentUpon>202102191910069_Feb_19_21_02009.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102211752422_Feb2121.resx">
+      <DependentUpon>202102211752422_Feb2121.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102261935325_switchToDateTime2.resx">
+      <DependentUpon>202102261935325_switchToDateTime2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102261937299_switchToDateTimeNormal.resx">
+      <DependentUpon>202102261937299_switchToDateTimeNormal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102262004009_nowString.resx">
+      <DependentUpon>202102262004009_nowString.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
