@@ -1,4 +1,2 @@
 # Inventory_Management_System
-Hey Christine, I based this off your example, I am sorry for the quality of my work,
-I have been struggeling with this assignement, but Im still working on it and gradualy getting closer to a complete mvp. I now have Create read,update and delete, for one table. I am getting this project closer to being functional, It will just require more time and practice
- 
+This is what I have so far, I still need to add Crud to 3 tables but its working for one. I was able to fix the date time issue. with a few more weeks of work I believe I can get this project to be a website I can really be proud of, Once I have Crud accross the board I will focus on building A feature for determining hop bitternes as well as a feature that can be used to get a visual representation of the color of beer a malt will provide (SRM).
