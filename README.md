@@ -1,2 +1,12 @@
 # Inventory_Management_System
-This is what I have so far, I still need to add Crud to 3 tables but its working for one. I was able to fix the date time issue. with a few more weeks of work I believe I can get this project to be a website I can really be proud of, Once I have Crud accross the board I will focus on building A feature for determining hop bitternes as well as a feature that can be used to get a visual representation of the color of beer a malt will provide (SRM).
+## What I have
+
+- Basic Crud on most tables
+- One to many relationships
+Functional LINQ Database
+
+## Whats next
+
+- Complete CRUD on all tables
+Add log in
+Add simple image uploading feature
